@@ -9,8 +9,8 @@
     --transparent-white: #ffffffbf; /* paragraphs */
     --gray-01: #f2f2f2;/* background headings, buttons */
 
-    --font-title: 'Big Shoulders';
-    --font-paragraph: 'Lexend Deca';
+    --font-primary: 'Lexend Deca';
+    --font-secondary: 'Big Shoulders';
 }
 
 * {
@@ -21,7 +21,87 @@
 
 body {
     min-height: 100vh;
-    font-family: var(--font-paragraph), Arial, Helvetica, sans-serif;
+    font-family: var(--font-primary), Arial, Helvetica, sans-serif;
     font-size: 0.93rem;
     font-weight: normal;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--gray-01);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    width: 1000px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px;
+    height: 100%;
+}
+
+.card_img {
+    width: 60px;
+}
+
+.card h1 {
+    font-family: var(--font-secondary);
+    font-size: 2.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--gray-01);
+}
+
+.card p {
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--transparent-white);
+}
+
+.learn_more_btn {
+    width: 70%;
+    margin-top: 40px;
+    padding: 15px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#sedans {
+    background-color: var(--gold-01);
+}
+
+#suvs {
+    background-color: var(--cyan-01);
+}
+
+#luxury {
+    background-color: var(--green-01);
+}
+
+#sedans .learn_more_btn {
+    color: var(--gold-01);
+}
+
+#suvs .learn_more_btn {
+    color: var(--cyan-01);
+}
+
+#luxury .learn_more_btn {
+    color: var(--green-01);
 }
