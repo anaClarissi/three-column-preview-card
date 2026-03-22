@@ -75,12 +75,14 @@ body {
     width: 70%;
     margin-top: 40px;
     padding: 15px;
-    border: none;
+    border: 3px solid var(--gray-01);
     border-radius: 30px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
+    transition: background-color .2s ease-in-out;
 }
+
 
 #sedans {
     background-color: var(--gold-01);
@@ -104,4 +106,19 @@ body {
 
 #luxury .learn_more_btn {
     color: var(--green-01);
+}
+
+#sedans .learn_more_btn:hover {
+    background-color: var(--gold-01);
+    color: var(--gray-01);
+}
+
+#suvs .learn_more_btn:hover {
+    background-color: var(--cyan-01);
+    color: var(--gray-01);
+}
+
+#luxury .learn_more_btn:hover {
+    background-color: var(--green-01);
+    color: var(--gray-01);
 }
