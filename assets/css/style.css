@@ -30,17 +30,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--gray-01);
+    padding: 20px;
 }
 
 .content {
     display: flex;
     align-items: center;
     width: 1000px;
-    height: 500px;
+    min-height: 500px;
     border-radius: 10px;
-    overflow: hidden;
 }
 
 .card {
@@ -73,6 +73,7 @@ body {
 
 .learn_more_btn {
     width: 70%;
+    min-width: 120px;
     margin-top: 40px;
     padding: 15px;
     border: 3px solid var(--gray-01);
@@ -86,6 +87,7 @@ body {
 
 #sedans {
     background-color: var(--gold-01);
+    border-radius: 10px 0 0 10px;
 }
 
 #suvs {
@@ -94,6 +96,7 @@ body {
 
 #luxury {
     background-color: var(--green-01);
+    border-radius: 0 10px 10px 0;
 }
 
 #sedans .learn_more_btn {
@@ -121,4 +124,51 @@ body {
 #luxury .learn_more_btn:hover {
     background-color: var(--green-01);
     color: var(--gray-01);
+}
+
+@media (max-width: 1030px) {
+
+    .container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .content {
+        flex-direction: column;
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    #sedans {
+        border-radius: 10px 10px 0 0;
+    }
+
+    #luxury {
+        border-radius: 0 0 10px 10px;
+    }
+
+}
+
+@media (max-width: 375px) {
+
+    .card h1 {
+        font-size: 1.8rem;
+    }
+
+    .card p {
+        font-size: 0.8rem;
+    }
+
+    .learn_more_btn {
+        margin-top: 20px;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+    
 }
